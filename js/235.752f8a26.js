@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkoradimi_portfolio"]=self["webpackChunkoradimi_portfolio"]||[]).push([[235],{9235:function(o,i,p){o.exports=p.p+"img/VRChatAvatars.e06c76bb.png"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkoradimi_portfolio"]=self["webpackChunkoradimi_portfolio"]||[]).push([[448],{7448:function(o,i,p){o.exports=p.p+"img/KanColleEnglishPatch.d47700a4.png"}}]);

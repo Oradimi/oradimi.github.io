@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkoradimi_portfolio"]=self["webpackChunkoradimi_portfolio"]||[]).push([[900],{1900:function(i,o,p){i.exports=p.p+"img/Rubik4D.5139c0c6.png"}}]);

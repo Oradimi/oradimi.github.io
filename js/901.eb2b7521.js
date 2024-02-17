@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkoradimi_portfolio"]=self["webpackChunkoradimi_portfolio"]||[]).push([[901],{7282:function(i,o,n){i.exports=n.p+"img/MeinaAnimation.36c48d74.png"}}]);

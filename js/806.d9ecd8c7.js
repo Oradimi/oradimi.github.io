@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkoradimi_portfolio"]=self["webpackChunkoradimi_portfolio"]||[]).push([[806],{8806:function(i,o,a){i.exports=a.p+"img/MeinaMeetsFanay.b7a18a27.png"}}]);
