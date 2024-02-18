@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkoradimi_portfolio"]=self["webpackChunkoradimi_portfolio"]||[]).push([[589],{8589:function(o,e,i){o.exports=i.p+"img/KanColleVideo.63dee513.png"}}]);

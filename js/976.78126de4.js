@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkoradimi_portfolio"]=self["webpackChunkoradimi_portfolio"]||[]).push([[976],{3976:function(o,i,p){o.exports=p.p+"img/DelaunayVoronoi.c9a34cd6.png"}}]);

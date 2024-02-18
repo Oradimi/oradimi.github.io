@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkoradimi_portfolio"]=self["webpackChunkoradimi_portfolio"]||[]).push([[893],{893:function(i,o,p){i.exports=p.p+"img/MeinaPaper.7af985ff.jpg"}}]);

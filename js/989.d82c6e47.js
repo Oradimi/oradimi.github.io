@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkoradimi_portfolio"]=self["webpackChunkoradimi_portfolio"]||[]).push([[989],{7989:function(o,i,p){o.exports=p.p+"img/MadeInAbyss.b62c6d3f.png"}}]);
