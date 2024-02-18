@@ -1,18 +1,28 @@
 <template>
 <div class="main">
-    <p>
-        Hello there.<br>
-        My curiosity opened me to many fields related to new technologies, that's why
-    </p>
     <h2>
-        I'm an aspiring <b>technical artist</b>
+        Hello, I'm a developer
     </h2>
+    <p>
+        C++ – OpenGL – Unity – Godot – Web
+    </p>
+    <h3>
+        but I can do <b>a lot more</b>
+    </h3>
+    <p>
+        Blender – Photoshop – Premiere Pro – Translation (FR-EN-JP)<br>...
+    </p>
+    <LinksItem/>
 </div>
 </template>
 
 <script>
+import LinksItem from "@/components/LinksItem.vue";
 export default {
     name: 'HomeItem',
+    components: {
+        LinksItem
+    }
 }
 </script>
 

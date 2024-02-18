@@ -1,5 +1,5 @@
 <template>
-<div class="project">
+<div :class="{ 'project': detailed, 'small-project': !detailed }">
     <div v-if="detailed" class="content">
         <div class="head">
             <h2 class="name"><a :href=link target="_blank">{{ name }}</a></h2>
@@ -8,6 +8,10 @@
         <div class="details">
             <p class="description" v-html="formattedDescription"></p>
         </div>
+    </div>
+    <div v-else-if="typeof description !== 'undefined'">
+        <h2 v-show="typeof name !== 'undefined'" class="name-small"><a :href=link target="_blank">{{ name }}</a></h2>
+        <p class="description" v-html="formattedDescription"></p>
     </div>
     <div class="image-canvas" :class="{ 'detailed': detailed }" @click="zoomInHandler">
         <img :src="imageUrl" />
@@ -75,13 +79,18 @@ export default {
 
 <style scoped>
 .project {
-    border-radius: 2rem;
-    border-color: aliceblue;
     flex-wrap: nowrap;
+    justify-content: space-between;
     align-items: center;
-    background-size: cover;
-    color: white;
     display: block;
+    margin: 0.5rem;
+}
+
+.small-project {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column-reverse;
+    align-items: center;
     margin: 0.5rem;
 }
 
@@ -95,13 +104,14 @@ export default {
 }
 
 .content {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
 }
 
 @media (min-width: 1024px) {
     .content {
         width: 30vw;
-        display: block;
     }
 }
 
@@ -129,21 +139,13 @@ export default {
     cursor: zoom-in;
 }
 
-.head {
-    align-items: center;
-    display: block;
-}
-
-@media (min-width: 1024px) {
-    .head {
-        align-items: center;
-        display: block;
-    }
-}
-
 .name {
     padding: 20px 20px 0px 20px;
-    display: block;
+}
+
+.name-small {
+    padding: 0px 10px 0px 0px;
+    font-size: 18px;
 }
 
 .category {
@@ -152,7 +154,7 @@ export default {
 
 .details {
     padding: 20px;
-    display: block;
+    text-align: justify;
 }
 
 .full-image {

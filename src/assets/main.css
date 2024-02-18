@@ -1,10 +1,24 @@
 @import './base.css';
 
 #app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
   max-width: 90vw;
   margin: 0 auto;
   padding: 0rem;
   font-weight: normal;
+}
+
+@media (min-width: 1024px) {
+  #app {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+  }
 }
 
 a,
@@ -24,28 +38,6 @@ a.router-link-exact-active {
   a:hover {
     background-color: hsla(215, 100%, 37%, 0.2);
     border-radius: 10px 10px;
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    background: linear-gradient(
-      to bottom,
-      #181818 0%,
-      #242c34 80%,
-      #2c3e50 100%
-    );
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-  }
-
-  #app {
-    display: block;
-    grid-template-columns: 1fr 1fr;
-    padding: 2rem;
   }
 }
 

@@ -5,21 +5,11 @@
   category="January 2024 – Game Jam (Godot 4, Blender)"
   description="A project made alone in 2 days for <b>Gamejam 64</b>.
   Hit the key prompt in rhythm to earn points!
+  We had to include a mise en abyme within the game.
   Assets made with <b>Blender</b>."
   link="https://oradimi.itch.io/meina-teaches-typing"
   image="MeinaTeachesTyping.png"
   video="https://drive.google.com/file/d/14D-sG95ThUUpwGBXa6WSwzXcuKDBXxMt/preview"
-  />
-
-  <ProjectItem detailed
-  name="Dualitimac 2025"
-  category="December 2023 – Animation (Blender)"
-  description="A collaborative animation for a <b>Blender</b> class project.
-  Each student had to make a 4-seconds animation with some constraints.
-  My own contribution is the third to appear in the video!"
-  link="https://www.youtube.com/watch?v=9QyrhAM1LBw"
-  image="MeinaAnimation.png"
-  video="https://drive.google.com/file/d/15mFSMwAdr6wH0_rOHtdptn_yc8HPuAb-/preview"
   />
 
   <ProjectItem detailed
@@ -28,6 +18,7 @@
   description="A fully functional 4D Rubik's Cube made in a 3-people team.
   An actual 4D implementation has been used under the hood.
   Build showcased made in 3 weeks using <b>Unity</b>.
+  We were all equally involved in the development.
   Still in development until May 2024.
   Featured in the <a href=https://hypercubing.xyz/software/ target='_blank'>Hypercubing website software list</a>."
   link="https://github.com/melokye/IMAC2_Rubik4D"
@@ -36,20 +27,9 @@
   />
 
   <ProjectItem detailed
-  name="25hBD 2023 Edition"
-  category="October 2023 – Comic (ClipStudioPaint)"
-  description="A half-yearly event where you must draw a 12-page comic with a theme and a constraint in 24 hours.
-  Theme: “It’s all a question of scale!”
-  Constraint: “Make an optical illusion appear.”
-  Here is a <a href=https://drive.google.com/file/d/1gM5X8ZDr3V_CYE-5xi9YAm0n6QS1R2gS/view target='_blank'>link to the english version</a>."
-  link="https://25hbd.com/participants/2023/oradimi/"
-  image="MeinaMeetsFanay.png"
-  />
-
-  <ProjectItem detailed
   name="Easter Panic"
   category="May 2023 – Game Jam (Godot 4, Photoshop)"
-  description="A project made alone in 3 days for <b>Ludum Dare 53</b>.
+  description="For my first game jam alone. Made in 3 days for <b>Ludum Dare 53</b>.
   Drag the eggs to the right passersby to earn points!
   Assets made with <b>Photoshop</b>."
   link="https://ldjam.com/events/ludum-dare/53/easter-panic"
@@ -58,15 +38,14 @@
   />
 
   <ProjectItem detailed
-  name="VRChat Avatars"
-  category="Since February 2022 – Modeling, Rigging, Texturing (Blender, Unity)"
-  description=
-  "<b>Modeling</b> from scratch of 3D characters usable within VRChat or any purpose.
-  They have facial expression blendshapes, physics, and many options.
-  Left: Meina v1.4.2 (2023/08/22)
-  Right: Elizabeth v1.0.0 (2024/02/09) (design from <a href=https://www.pixiv.net/en/artworks/113663868 target='_blank'>stoictroglodyte</a>)"
-  link="https://github.com/Oradimi/KanColle-English-Patch-KCCP"
-  image="VRChatAvatars.png"
+  name="Delaunay Voronoi"
+  category="May 2023 – Demo (C++, SDL2)"
+  description="A <b>C++</b> school project made alone.
+  Clicking on the screen creates points and links them
+  in a special way showcased here."
+  link="https://github.com/Oradimi/Delaunay-Voronoi"
+  image="DelaunayVoronoi.png"
+  video="https://drive.google.com/file/d/1-fG7dJp1upOypQNRBuLRhnhzmEFoPHaY/preview"
   />
 
   <ProjectItem detailed
@@ -75,11 +54,11 @@
   description=
   "<b>Translation</b> of a Japanese online game into English.
   Modification or recreation of assets with <b>Photoshop.</b>
-  Implementation in a third party <b>Java</b> Android app.
+  Implementation in a <a href='https://github.com/antest1/GotoBrowser' target='_blank'> third party <b>Java</b> Android app</a>.
   Making of video tutorials with <b>Premiere Pro</b>.
   Management of a related Discord.
   Making of scripts to make installation easier.
-  <a href=https://imgur.com/a/oAB9f7x target='_blank'>More screenshots</a>"
+  <a href='https://imgur.com/a/oAB9f7x' target='_blank'>More screenshots</a>"
   link="https://github.com/Oradimi/KanColle-English-Patch-KCCP"
   image="KanColleEnglishPatch.png"
   />
@@ -96,5 +75,14 @@ export default {
 </script>
 
 <style scoped>
+.projects {
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
 
+.image-collection {
+  display: flex;
+  flex-wrap: wrap;
+}
 </style>

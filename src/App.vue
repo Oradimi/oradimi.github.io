@@ -1,11 +1,16 @@
 <template>
-<HeaderItem/>
-<router-view v-slot="{ Component }">
-  <transition name="slide-fade">
-    <component :is="Component" />
-  </transition>
-</router-view>
-<footer>Made by Oradimi with ❤️</footer>
+<div></div>
+<div class="wrapper">
+  <HeaderItem/>
+  <router-view v-slot="{ Component }">
+    <transition name="slide-fade">
+      <component :is="Component" />
+    </transition>
+  </router-view>
+</div>
+<footer>
+  Made by myself with <a href="https://vuejs.org/" target="_blank"><b>Vue.js</b></a>
+</footer>
 </template>
 
 <script>
@@ -29,8 +34,19 @@ export default {
   opacity: 0;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 footer {
   text-align: center;
-  margin: 2rem;
+  align-items: flex-end;
+}
+
+small {
+  font-size: 0.8rem;
 }
 </style>

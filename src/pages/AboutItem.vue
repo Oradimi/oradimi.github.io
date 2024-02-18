@@ -1,45 +1,44 @@
 <template>
 <div class="main">
+    <LinksItem/>
+    <div class="image-canvas">
+        <img src="../assets/misc/photo.jpg" align="right">
+    </div>
     <h2>
-        I want to <b>create</b>
+        Who am I?
     </h2>
     <p>
-        All-rounder in fields related to video games,<br>
-        I'm doing my best to become better at each of them.
+        I'm someone who prefers to work in front of a screen.
+        Ever since I was little, I've <b>always loved video games</b>
+        and at the time, I contemplated the idea of creating them myself.
+        It is towards this goal that I've worked ever since,
+        exploring all the puzzle pieces of video game creation.
+        Through learning a lot of things by myself, I became <b>versatile</b>
+        and I'm capable of <b>quickly learning</b> new concepts.<br>
+        If you'd like to get in touch, you can find my contact information
+        in my <a href="/resume.pdf">resume</a>.
     </p>
-    <nav class="external">
-        <a href="/resume.pdf" target="_blank">resume</a>
-        <a href="https://github.com/Oradimi" target="_blank">github</a>
-        <a href="https://twitter.com/Oradimi" target="_blank">twitter</a>
-        <a href="https://www.youtube.com/@Oradimi" target="_blank">youtube</a>
-        <a href="https://www.linkedin.com/in/logan-argouse-8779422aa/" target="_blank">linkedin</a>
-    </nav>
 </div>
 </template>
 
 <script>
+import LinksItem from "@/components/LinksItem.vue"
 export default {
     name: 'AboutItem',
+    components: {
+        LinksItem
+    },
 }
 </script>
 
 <style scoped>
-.external {
-    margin: 2rem;
-}
-
-.external > * {
-    color: #fff;
-    background-color: #a92a2a;
-    border-radius: 20px 20px;
-    padding: 10px;
-    margin: 1rem;
-}
-
-.external > *:hover {
-    color: #fff;
-    background-color: #7f2828;
-    border-radius: 10px 10px;
+.image-canvas img {
+    max-height: 40vh;
+    max-width: 300px;
+    padding: 2rem;
+    border-collapse: separate; 
+    border-radius: 100%;
+    object-fit: cover;
 }
 
 .main {
@@ -54,28 +53,17 @@ h2 {
     font-weight: normal;
 }
 
-b {
-    background-image: linear-gradient(
-        -225deg,
-        #fff800 0%,
-        #20ade0 29%,
-        #cd5c5c 67%,
-        #fff800 100%
-    );
-    background-size: auto auto;
-    background-clip: border-box;
-    background-size: 200% auto;
-    color: #fff;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textclip 2s linear infinite;
-    display: inline-block;
+p {
+    text-align: justify;
 }
 
-@keyframes textclip {
-    to {
-        background-position: 200% center;
+@media (min-width: 600px) {
+    p {
+        max-width: 30vw;
     }
+}
+
+b {
+    color: #20ade0;
 }
 </style>
