@@ -63,15 +63,15 @@
   <div class="image-collection">
     <ProjectItem
     description="Meina v1.4.2 (2023/08/22)"
-    image="modeling/MeinaRef.png"/>
+    image="models/MeinaRef.png"/>
     <ProjectItem
     description="Elizabeth v1.0.0 (2024/02/09)
     (design from <a href='https://www.pixiv.net/en/artworks/113663868' target='_blank'>stoictroglodyte</a>)"
-    image="modeling/ElizabethRef.png"/>
+    image="models/ElizabethRef.png"/>
     <ProjectItem
     description="Paper Meina
     (inspired by <a href='https://twitter.com/hima1chan_/status/1699043514519376167?s=20' target='_blank'>@hima1chan_</a>)"
-    image="modeling/MeinaPaper.jpg"/>
+    image="models/MeinaPaper.jpg"/>
   </div>
 
   <h2>Videos</h2>
