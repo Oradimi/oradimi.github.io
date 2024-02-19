@@ -79,8 +79,10 @@ export default {
 
 <style scoped>
 .project {
+    color: white;
+    max-width: 80vw;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     display: block;
     margin: 0.5rem;
@@ -96,9 +98,6 @@ export default {
 
 @media (min-width: 1024px) {
     .project {
-        background-size: cover;
-        vertical-align: middle;
-        color: white;
         display: flex;
     }
 }
@@ -111,7 +110,7 @@ export default {
 
 @media (min-width: 1024px) {
     .content {
-        width: 30vw;
+        width: 40rem;
     }
 }
 

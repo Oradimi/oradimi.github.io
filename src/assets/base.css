@@ -19,10 +19,17 @@
   --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+
+  --vt-c-blue-gradient: linear-gradient(
+    to bottom,
+    #181818 0%,
+    #242c34 80%,
+    #2c3e50 100%
+  );
 }
 
 /* semantic color variables for this project */
-:root {
+/* :root {
   --color-background: var(--vt-c-white);
   --color-background-soft: var(--vt-c-white-soft);
   --color-background-mute: var(--vt-c-white-mute);
@@ -34,21 +41,21 @@
   --color-text: var(--vt-c-text-light-1);
 
   --section-gap: 160px;
+} */
+
+/* @media (prefers-color-scheme: dark) { */
+:root {
+  --color-background: var(--vt-c-black);
+  --color-background-soft: var(--vt-c-black-soft);
+  --color-background-mute: var(--vt-c-black-mute);
+
+  --color-border: var(--vt-c-divider-dark-2);
+  --color-border-hover: var(--vt-c-divider-dark-1);
+
+  --color-heading: var(--vt-c-text-dark-1);
+  --color-text: var(--vt-c-text-dark-2);
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: var(--vt-c-black);
-    --color-background-soft: var(--vt-c-black-soft);
-    --color-background-mute: var(--vt-c-black-mute);
-
-    --color-border: var(--vt-c-divider-dark-2);
-    --color-border-hover: var(--vt-c-divider-dark-1);
-
-    --color-heading: var(--vt-c-text-dark-1);
-    --color-text: var(--vt-c-text-dark-2);
-  }
-}
+/* } */
 
 *,
 *::before,
@@ -60,20 +67,12 @@
 body {
   min-height: 100vh;
   color: var(--color-text);
-  background: linear-gradient(
-    to bottom,
-    #181818 0%,
-    #242c34 80%,
-    #2c3e50 100%
-  );
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: var(--color-background);
   display: flex;
   align-items: center;
-  transition:
+  /* transition:
     color 0.5s,
-    background-color 0.5s;
+    background-color 0.5s; */
   line-height: 1.6;
   font-family:
     'Encode Sans',
@@ -97,12 +96,7 @@ body {
 
 @media (min-width: 1024px) {
   body {
-    background: linear-gradient(
-      to bottom,
-      #181818 0%,
-      #242c34 80%,
-      #2c3e50 100%
-    );
+    background: var(--vt-c-blue-gradient);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;

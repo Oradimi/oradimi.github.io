@@ -1,5 +1,5 @@
 <template>
-<div></div>
+<div class="padder"></div>
 <div class="wrapper">
   <HeaderItem/>
   <router-view v-slot="{ Component }">
@@ -9,7 +9,7 @@
   </router-view>
 </div>
 <footer>
-  Made by myself with <a href="https://vuejs.org/" target="_blank"><b>Vue.js</b></a>
+  Made with <a href="https://vuejs.org/" target="_blank"><b>Vue.js</b></a>
 </footer>
 </template>
 
@@ -34,11 +34,22 @@ export default {
   opacity: 0;
 }
 
+.padder {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .padder {
+    display: flex;
+  }
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
 footer {

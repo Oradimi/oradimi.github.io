@@ -6,9 +6,6 @@
     <li class="projects">
         <h2><router-link to="/projects">Dev</router-link></h2>
     </li>
-    <li class="gallery">
-        <h2><router-link to="/gallery">Bonus</router-link></h2>
-    </li>
     <li class="about">
         <h2><router-link to="/about">About</router-link></h2>
     </li>
@@ -23,7 +20,8 @@ export default {
 
 <style scoped>
 .header {
-    display: block;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -33,9 +31,9 @@ export default {
     padding: 0px 10px 0px 10px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 450px) {
     .header {
-        display: flex;
+        flex-direction: row;
     }
 }
 </style>

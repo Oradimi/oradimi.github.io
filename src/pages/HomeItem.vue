@@ -1,16 +1,10 @@
 <template>
 <div class="main">
     <h2>
-        Hello, I'm a developer
+        Hello, I'm a <b>developer</b>
     </h2>
     <p>
         C++ – OpenGL – Unity – Godot – Web
-    </p>
-    <h3>
-        but I can do <b>a lot more</b>
-    </h3>
-    <p>
-        Blender – Photoshop – Premiere Pro – Translation (FR-EN-JP)<br>...
     </p>
     <LinksItem/>
 </div>
@@ -37,6 +31,7 @@ export default {
 h2 {
     font-size: 48px;
     font-weight: normal;
+    
 }
 
 b {

@@ -111,18 +111,12 @@ export default {
   },
   data() {
     return {
-      modeling: [],
-      drawing: []
+      modeling: []
     };
   },
   created() {
     this.modeling = require.context(
       '@/assets/projects/modeling',
-      true,
-      /^.*\.png$/
-    ),
-    this.drawing = require.context(
-      '@/assets/projects/drawing',
       true,
       /^.*\.png$/
     )

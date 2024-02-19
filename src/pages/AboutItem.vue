@@ -1,8 +1,7 @@
 <template>
 <div class="main">
-    <LinksItem/>
     <div class="image-canvas">
-        <img src="../assets/misc/photo.jpg" align="right">
+        <img src="../assets/misc/photo.jpg" class="aligned-right">
     </div>
     <h2>
         Who am I?
@@ -16,8 +15,12 @@
         Through learning a lot of things by myself, I became <b>versatile</b>
         and I'm capable of <b>quickly learning</b> new concepts.<br>
         If you'd like to get in touch, you can find my contact information
-        in my <a href="/resume.pdf">resume</a>.
+        in my <a href="/resume.pdf"><b class="blue">resume</b></a>.<br>
+        And if you're curious, here's a non-exhaustive list of
+        <router-link to="/gallery"><b class="blue">some other things</b></router-link>
+        I did outside of development.
     </p>
+    <LinksItem/>
 </div>
 </template>
 
@@ -32,6 +35,16 @@ export default {
 </script>
 
 <style scoped>
+.aligned-right {
+    float: none;
+}
+
+@media (min-width: 1024px) {
+    .aligned-right {
+        float: right;
+    }
+}
+
 .image-canvas img {
     max-height: 40vh;
     max-width: 300px;
@@ -57,13 +70,20 @@ p {
     text-align: justify;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
     p {
-        max-width: 30vw;
+        max-width: 600px;
+    }
+    .image-canvas img {
+        shape-outside: circle()
     }
 }
 
 b {
+    color: indianred;
+}
+
+.blue {
     color: #20ade0;
 }
 </style>
