@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkoradimi_portfolio"]=self["webpackChunkoradimi_portfolio"]||[]).push([[223],{2223:function(e,o,i){e.exports=i.p+"img/26_remove.1e9e45ea.png"}}]);
