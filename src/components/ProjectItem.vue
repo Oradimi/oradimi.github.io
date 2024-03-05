@@ -19,7 +19,7 @@
 </div>
 <div v-if="showFullImage" class="full-image" @click="zoomInHandler">
     <div v-if="typeof video !== 'undefined'" class="iframe-container">
-        <div v-if="showThumbnail" class="thumbnail" :style="{ backgroundImage: 'url(' + imageUrl + ')' }"></div>
+        <img v-if="showThumbnail" :src="imageUrl" />
         <button v-if="showThumbnail" @click.stop="playVideo" class="play-button">show video</button>
         <iframe v-if="!showThumbnail"
         :src="video" width="1280" height="720"
@@ -79,7 +79,6 @@ export default {
 
 <style scoped>
 .project {
-    color: white;
     max-width: 80vw;
     flex-wrap: nowrap;
     justify-content: space-evenly;
@@ -175,28 +174,19 @@ export default {
 }
 
 .iframe-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    width: 1280px;
-    height: 720px;
+    width: 90%;
+    height: 90%;
 }
 
 .iframe-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-}
-
-.thumbnail {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
+    max-width: 1280px;
+    max-height: 720px;
 }
 
 .play-button {
@@ -216,13 +206,9 @@ export default {
         'Helvetica Neue',
         sans-serif;
     font-size: 18px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px 20px;
     color: #fff;
     background-color: #a92a2a;
-    border-radius: 20px 20px;
+    border-radius: 20px;
     padding: 10px;
     margin: 1rem;
     z-index: 2;

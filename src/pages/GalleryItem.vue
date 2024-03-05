@@ -62,12 +62,15 @@
 
   <div class="image-collection">
     <ProjectItem
-    description="Meina v1.4.2 (2023/08/22)"
-    image="models/MeinaRef.png"/>
+    description="Meina v1.5.0 (2024/03/01)"
+    image="models/MeinaRef150.png"/>
+    <ProjectItem
+    description="Fanay v1.0.0 (2024/02/26)"
+    image="models/FanayRef100.png"/>
     <ProjectItem
     description="Elizabeth v1.0.0 (2024/02/09)
     (design from <a href='https://www.pixiv.net/en/artworks/113663868' target='_blank'>stoictroglodyte</a>)"
-    image="models/ElizabethRef.png"/>
+    image="models/ElizabethRef100.png"/>
     <ProjectItem
     description="Paper Meina
     (inspired by <a href='https://twitter.com/hima1chan_/status/1699043514519376167?s=20' target='_blank'>@hima1chan_</a>)"

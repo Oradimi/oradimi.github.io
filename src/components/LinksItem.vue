@@ -45,8 +45,8 @@ export default {
   top: calc(100% + 5px);
   left: 50%;
   transform: translateX(-50%);
-  background-color: black;
-  color: white;
+  background-color: var(--color-background-soft);
+  color: var(--color-text);
   padding: 5px 10px;
   border-radius: 5px;
   opacity: 0;
@@ -71,7 +71,7 @@ img {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin: 0rem;
+    margin: 1rem 0;
 }
 
 .links > * {
@@ -80,14 +80,13 @@ img {
     align-items: center;
     height: 60px;
     width: 60px;
-    color: #fff;
-    background-color: #a92a2a;
+    background-color: var(--color-link-selected);
     border-radius: 50%;
     padding: 0px;
-    margin: 1rem;
+    margin: 0 1rem;
 }
 
 .links > *:hover {
-    background-color: #531a1a;
+    background-color: var(--color-link-hover);
 }
 </style>

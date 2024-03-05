@@ -16,9 +16,9 @@
         and I'm capable of <b>quickly learning</b> new concepts.<br>
         If you'd like to get in touch, you can find my contact information
         in my <a href="/resume.pdf"><b class="blue">resume</b></a>.<br>
-        And if you're curious, here's a non-exhaustive list of
-        <router-link to="/gallery"><b class="blue">some other things</b></router-link>
-        I did outside of development.
+        And if you're curious,
+        <router-link to="/gallery"><b class="blue">this link right here</b></router-link>
+        contains a non-exhaustive list of some other things I did outside of development.
     </p>
     <LinksItem/>
 </div>
@@ -79,11 +79,7 @@ p {
     }
 }
 
-b {
-    color: indianred;
-}
-
 .blue {
-    color: #20ade0;
+    color: var(--color-link)
 }
 </style>

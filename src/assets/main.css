@@ -7,7 +7,7 @@
   height: 100vh;
   max-width: 90vw;
   margin: 0 auto;
-  padding: 0rem;
+  padding: 2rem 0 0 0;
   font-weight: normal;
 }
 
@@ -17,21 +17,21 @@
     height: 100vh;
     flex-direction: column;
     grid-template-columns: 1fr 1fr;
-    padding: 2rem;
+    padding: 2rem 0 0 0;
   }
 }
 
 a,
 .green {
   text-decoration: none;
-  color: rgb(32, 173, 224);
+  color: var(--color-link);
   transition: 0.4s;
   padding: 3px;
 }
 
 a.router-link-active,
 a.router-link-exact-active {
-  color: indianred;
+  color: var(--color-link-selected);
 }
 
 @media (hover: hover) {
