@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkoradimi_portfolio"]=self["webpackChunkoradimi_portfolio"]||[]).push([[697],{2697:function(o,i,p){o.exports=p.p+"img/FanayRef100.96269c3a.png"}}]);
