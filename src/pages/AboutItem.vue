@@ -15,7 +15,7 @@
         Through learning a lot of things by myself, I became <b>versatile</b>
         and I'm capable of <b>quickly learning</b> new concepts.<br>
         If you'd like to get in touch, you can find my contact information
-        in my <a href="/resume.pdf"><b class="blue">resume</b></a>.<br>
+        in my <a href="/resume.pdf" target="_blank"><b class="blue">resume</b></a>.<br>
         And if you're curious,
         <router-link to="/gallery"><b class="blue">this link right here</b></router-link>
         contains a non-exhaustive list of some other things I did outside of development.

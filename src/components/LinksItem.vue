@@ -71,6 +71,7 @@ img {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    min-width: 280px;
     margin: 1rem 0;
 }
 

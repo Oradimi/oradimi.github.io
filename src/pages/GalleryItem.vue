@@ -56,7 +56,6 @@
   description=
   "<b>Modeling</b> from scratch of 3D characters usable within VRChat or any purpose.
   They have facial expression blendshapes, physics, and many options."
-  link="https://github.com/Oradimi/KanColle-English-Patch-KCCP"
   image="VRChatAvatars.png"
   />
 
@@ -129,7 +128,8 @@ export default {
 
 <style scoped>
 .works {
-  display: block;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -137,6 +137,6 @@ export default {
 .image-collection {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: center;
 }
 </style>

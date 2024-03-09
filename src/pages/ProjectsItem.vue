@@ -76,7 +76,8 @@ export default {
 
 <style scoped>
 .projects {
-  display: block;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -84,5 +85,6 @@ export default {
 .image-collection {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 </style>

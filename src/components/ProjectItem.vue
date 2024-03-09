@@ -2,15 +2,27 @@
 <div :class="{ 'project': detailed, 'small-project': !detailed }">
     <div v-if="detailed" class="content">
         <div class="head">
-            <h2 class="name"><a :href=link target="_blank">{{ name }}</a></h2>
-            <em class="category">· {{ category }}</em>
+            <h2 class="name">
+                <a :href=link target="_blank">{{ name }} 
+                    <svg v-if="link" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" stroke="#666" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </a>
+            </h2>
+            <p class="category"><em>· {{ category }}</em></p>
         </div>
         <div class="details">
             <p class="description" v-html="formattedDescription"></p>
         </div>
     </div>
     <div v-else-if="typeof description !== 'undefined'">
-        <h2 v-show="typeof name !== 'undefined'" class="name-small"><a :href=link target="_blank">{{ name }}</a></h2>
+        <h2 v-show="typeof name !== 'undefined'" class="name-small">
+            <a :href=link target="_blank">{{ name }}
+                <svg v-if="link" width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" stroke="#666" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </a>
+        </h2>
         <p class="description" v-html="formattedDescription"></p>
     </div>
     <div class="image-canvas" :class="{ 'detailed': detailed }" @click="zoomInHandler">
@@ -84,7 +96,7 @@ export default {
     justify-content: space-evenly;
     align-items: center;
     display: block;
-    margin: 0.5rem;
+    margin: 0 0 20px 0;
 }
 
 .small-project {
@@ -92,7 +104,7 @@ export default {
     flex-wrap: nowrap;
     flex-direction: column-reverse;
     align-items: center;
-    margin: 0.5rem;
+    margin: 20px;
 }
 
 @media (min-width: 1024px) {
@@ -104,12 +116,13 @@ export default {
 .content {
     display: flex;
     flex-direction: column;
-    padding: 0.5rem;
+    margin: 20px 0;
 }
 
 @media (min-width: 1024px) {
     .content {
         width: 40rem;
+        margin: 20px 20px 20px 0;
     }
 }
 
@@ -137,21 +150,25 @@ export default {
     cursor: zoom-in;
 }
 
+.head {
+    margin: 0 0 20px 0;
+}
+
 .name {
-    padding: 20px 20px 0px 20px;
+    padding: 0;
 }
 
 .name-small {
-    padding: 0px 10px 0px 0px;
+    padding: 0px;
+    margin: 6px 0;
     font-size: 18px;
 }
 
 .category {
-    padding: 20px;
+    padding: 0 0 0 10px;
 }
 
 .details {
-    padding: 20px;
     text-align: justify;
 }
 
