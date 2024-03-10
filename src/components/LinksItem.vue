@@ -1,22 +1,22 @@
 <template>
 <nav class="links">
-    <a class="link-container" href="/resume.pdf" target="_blank" @mouseover="hovered = true" @mouseleave="hovered = false">
+    <a class="link-container" href="/resume.pdf" target="_blank">
         <img src="../assets/logos/resume.svg" alt="resume"/>
-        <p class="link-name">Resume</p>
+        <p class="link-name">{{ $t('resume') }}</p>
     </a>
-    <a class="link-container" href="https://github.com/Oradimi" target="_blank" @mouseover="hovered = true" @mouseleave="hovered = false">
+    <a class="link-container" href="https://github.com/Oradimi" target="_blank">
         <img src="../assets/logos/github.svg" alt="github"/>
         <p class="link-name">GitHub</p>
     </a>
-    <a class="link-container" href="https://twitter.com/Oradimi" target="_blank" @mouseover="hovered = true" @mouseleave="hovered = false">
+    <a class="link-container" href="https://twitter.com/Oradimi" target="_blank">
         <img src="../assets/logos/twitter.svg" alt="twitter"/>
         <p class="link-name">Twitter</p>
     </a>
-    <a class="link-container" href="https://www.youtube.com/@Oradimi" target="_blank" @mouseover="hovered = true" @mouseleave="hovered = false">
+    <a class="link-container" href="https://www.youtube.com/@Oradimi" target="_blank">
         <img src="../assets/logos/youtube.svg" alt="youtube"/>
         <p class="link-name">YouTube</p>
     </a>
-    <a class="link-container" href="https://www.linkedin.com/in/logan-argouse-8779422aa/" target="_blank" @mouseover="hovered = true" @mouseleave="hovered = false">
+    <a class="link-container" href="https://www.linkedin.com/in/logan-argouse-8779422aa/" target="_blank">
         <img src="../assets/logos/linkedin.svg" alt="linkedin"/>
         <p class="link-name">LinkedIn</p>
     </a>
@@ -25,12 +25,7 @@
 
 <script>
 export default {
-    name: 'LinksItem',
-    data() {
-        return {
-            hovered: false
-        };
-    }
+    name: 'LinksItem'
 }
 </script>
 
@@ -38,6 +33,7 @@ export default {
 .link-container {
   position: relative;
   display: inline-block;
+  z-index: 2;
 }
 
 .link-name {
@@ -52,6 +48,8 @@ export default {
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
+  word-break: keep-all;
+  white-space: nowrap;
 }
 
 .link-container:hover .link-name {

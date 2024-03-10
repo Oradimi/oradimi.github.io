@@ -1,8 +1,8 @@
 <template>
 <div class="main">
-    <h2>
-        Hello, I'm a <b>developer</b>
-    </h2>
+    <i18n-t tag="h2" keypath="greeting.main">
+        <b>{{ $t('greeting.t0') }}</b>
+    </i18n-t>
     <p>
         C++ – OpenGL – Unity – Godot – Web
     </p>

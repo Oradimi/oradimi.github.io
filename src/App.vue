@@ -9,12 +9,16 @@
   </router-view>
 </div>
 <footer>
-  Lights
+  {{ $t('lights') }}
   <label id="theme-switch" class="theme-switch" for="checkbox_theme">
     <input type="checkbox" id="checkbox_theme">
     <span class="slider round"></span>
   </label>
-  · Made with <a href="https://vuejs.org/" target="_blank"><b>Vue.js</b></a>
+  · {{ $t('made') }}<a href="https://vuejs.org/" target="_blank"><b>Vue.js</b></a>
+  <br>
+  <button class="locale" :class="{ selected: $i18n.locale == 'en' }" @click="toggleLanguage('en')">English</button> · 
+  <button class="locale" :class="{ selected: $i18n.locale == 'fr' }" @click="toggleLanguage('fr')">Français</button> · 
+  <button class="locale" :class="{ selected: $i18n.locale == 'ja' }" @click="toggleLanguage('ja')">日本語</button>
 </footer>
 </template>
 
@@ -24,6 +28,26 @@ export default {
   name: 'PortfolioItem',
   components: {
     HeaderItem
+  },
+  methods: {
+    toggleLanguage(language) {
+      this.$i18n.locale = language;
+      localStorage.setItem('preferredLanguage', language);
+    }
+  },
+  created() {
+    const preferredLanguage = localStorage.getItem('preferredLanguage');
+    if (preferredLanguage) {
+      this.$i18n.locale = preferredLanguage;
+    } else {
+      const availableLocales = this.$i18n.availableLocales;
+      const usersLanguage = window.navigator.language;
+      if (availableLocales.includes(usersLanguage)) {
+        this.$i18n.locale = usersLanguage;
+      } else {
+        this.$i18n.locale = 'en';
+      }
+    }
   }
 }
 </script>
@@ -64,6 +88,26 @@ footer {
 
 small {
   font-size: 0.8rem;
+}
+
+.locale {
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: var(--color-link);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+.locale.selected {
+  color: var(--color-link-selected);
+}
+
+@media (hover: hover) {
+  .locale:hover {
+    background-color: hsla(215, 100%, 37%, 0.2);
+    border-radius: 10px 10px;
+  }
 }
 
 /* Switch */

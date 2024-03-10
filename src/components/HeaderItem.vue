@@ -4,10 +4,10 @@
         <h1><router-link to="/">Oradimi</router-link></h1>
     </li>
     <li class="projects">
-        <h2><router-link to="/projects">Dev</router-link></h2>
+        <h2><router-link to="/projects">{{ $t('dev') }}</router-link></h2>
     </li>
     <li class="about">
-        <h2><router-link to="/about">About</router-link></h2>
+        <h2><router-link to="/about">{{ $t('about') }}</router-link></h2>
     </li>
 </ul>
 </template>

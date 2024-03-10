@@ -4,28 +4,31 @@
         <img src="../assets/misc/photo.jpg" class="aligned-right">
     </div>
     <h2>
-        Who am I?
+        {{ $t('about_content.title') }}
     </h2>
-    <p>
-        I'm someone who prefers to work in front of a screen.
-        Ever since I was little, I've <b>always loved video games</b>
-        and at the time, I contemplated the idea of creating them myself.
-        It is towards this goal that I've worked ever since,
-        exploring all the puzzle pieces of video game creation.
-        Through learning a lot of things by myself, I became <b>versatile</b>
-        and I'm capable of <b>quickly learning</b> new concepts.<br>
-        If you'd like to get in touch, you can find my contact information
-        in my <a href="/resume.pdf" target="_blank"><b class="blue">resume</b></a>.<br>
-        And if you're curious,
-        <router-link to="/gallery"><b class="blue">this link right here</b></router-link>
-        contains a non-exhaustive list of some other things I did outside of development.
-    </p>
+    <i18n-t tag="p" keypath="about_content.body.main">
+        <template v-slot:link>
+            <router-link to='/gallery'><b class='blue'>{{ $t('about_content.body.link') }}</b></router-link>
+        </template>
+        <template v-slot:resume>
+            <a href='/resume.pdf' target='_blank'><b class='blue'>{{ $t('about_content.body.resume') }}</b></a>
+        </template>
+        <template v-slot:t0>
+            <b>{{ $t('about_content.body.t0') }}</b>
+        </template>
+        <template v-slot:t1>
+            <b>{{ $t('about_content.body.t1') }}</b>
+        </template>
+        <template v-slot:t2>
+            <b>{{ $t('about_content.body.t2') }}</b>
+        </template>
+    </i18n-t>
     <LinksItem/>
 </div>
 </template>
 
 <script>
-import LinksItem from "@/components/LinksItem.vue"
+import LinksItem from "@/components/LinksItem.vue";
 export default {
     name: 'AboutItem',
     components: {
@@ -68,6 +71,7 @@ h2 {
 
 p {
     text-align: justify;
+    white-space: pre-line;
 }
 
 @media (min-width: 1024px) {

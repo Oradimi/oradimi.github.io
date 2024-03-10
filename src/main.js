@@ -8,6 +8,7 @@ import HomeItem from "./pages/HomeItem.vue"
 import ProjectsItem from "./pages/ProjectsItem.vue"
 import AboutItem from "./pages/AboutItem.vue"
 import GalleryItem from "./pages/GalleryItem.vue"
+import i18n from './i18n'
 
 const routes = [
     { path: '/', component: HomeItem },
@@ -48,6 +49,7 @@ function detectColorScheme() {
 }
 
 const app = createApp(App)
+app.use(i18n)
 app.use(router)
 app.mount('#app')
 

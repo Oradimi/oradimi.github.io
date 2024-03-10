@@ -156,3 +156,20 @@ body {
     background-image: var(--vt-c-blue-gradient);
   }
 }
+
+button {
+  font-family:
+    'Encode Sans',
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+}
