@@ -113,7 +113,7 @@ export default {
         },
         meina_paper: {
             desc: "ペーパーメイナ\n"
-                + "(インスパイア元：<a href='https://twitter.com/hima1chan_/status/1699043514519376167?s=20' target='_blank'>@hima1chan_</a>)"
+                + "(インスパイア元：<a href='https://twitter.com/hima1chan_/status/1699043514519376167?s=20' target='_blank'>{'@'}hima1chan_</a>)"
         },
         kcit_android: {
             name: 'Android用',

@@ -112,7 +112,7 @@ export default {
         },
         meina_paper: {
             desc: "Meina en papier\n"
-                + "(inspiré de <a href='https://twitter.com/hima1chan_/status/1699043514519376167?s=20' target='_blank'>@hima1chan_</a>)"
+                + "(inspiré de <a href='https://twitter.com/hima1chan_/status/1699043514519376167?s=20' target='_blank'>{'@'}hima1chan_</a>)"
         },
         kcit_android: {
             name: 'Pour Android',

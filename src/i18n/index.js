@@ -4,6 +4,7 @@ import fr from './fr'
 import ja from './ja'
 
 const i18n = createI18n({
+  warnHtmlInMessage: "off",
   locale: 'en',
   messages: {
     en,
