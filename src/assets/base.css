@@ -89,7 +89,6 @@
 }
 
 body {
-  min-height: 100vh;
   color: var(--color-text);
   background-color: var(--color-background);
   display: flex;
@@ -112,7 +111,6 @@ body {
     'Droid Sans',
     'Helvetica Neue',
     sans-serif;
-  font-size: 18px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -126,6 +124,7 @@ body {
     display: flex;
     align-items: center;
     position: relative;
+    font-size: 18px;
   }
 
   body::before {

@@ -33,6 +33,10 @@ export default {
     toggleLanguage(language) {
       this.$i18n.locale = language;
       localStorage.setItem('preferredLanguage', language);
+
+      this.$nextTick(() => {
+        window.scrollTo(0, document.body.scrollHeight);
+      });
     }
   },
   created() {

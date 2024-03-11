@@ -29,9 +29,8 @@ export default {
 }
 
 h2 {
-    font-size: 48px;
+    font-size: 2.5em;
     font-weight: normal;
-    
 }
 
 b {
