@@ -11,9 +11,10 @@
   />
 
   <div class="image-collection">
-    <div v-for="image in modeling.keys()" :key="image.id">
-      <ProjectItem :image="'modeling/' + image.slice(2)"/>
-    </div>
+    <ProjectItem
+    image="modeling/Screenshot_01.png"/>
+    <ProjectItem
+    image="modeling/Screenshot_05.png"/>
   </div>
 
   <h2>{{ $t('gallery.art') }}</h2>
@@ -94,18 +95,6 @@ import ProjectItem from '@/components/ProjectItem.vue'
 export default {
   components: {
     ProjectItem
-  },
-  data() {
-    return {
-      modeling: []
-    };
-  },
-  created() {
-    this.modeling = require.context(
-      '@/assets/projects/modeling',
-      true,
-      /^.*\.png$/
-    )
   }
 }
 </script>

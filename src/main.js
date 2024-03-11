@@ -53,6 +53,17 @@ app.use(i18n)
 app.use(router)
 app.mount('#app')
 
+// workaround against Chrome Android initial window.innerHeight (it counts the keyboard)
+const meta = document.createElement('meta');
+meta.name = 'viewport';
+meta.content = 'width=device-width, initial-scale=1.0, interactive-widget=resizes-content';
+const firstMeta = document.querySelector('head meta');
+if (firstMeta) {
+  firstMeta.parentNode.insertBefore(meta, firstMeta.nextSibling);
+} else {
+  document.getElementsByTagName('head')[0].appendChild(meta);
+}
+
 detectColorScheme();
 
 // identify the toggle switch HTML element

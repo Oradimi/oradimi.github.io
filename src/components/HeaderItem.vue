@@ -1,15 +1,17 @@
 <template>
-<ul class="header">
-    <li class="name">
-        <h1><router-link to="/">Oradimi</router-link></h1>
-    </li>
-    <li class="projects">
-        <h2><router-link to="/projects">{{ $t('dev') }}</router-link></h2>
-    </li>
-    <li class="about">
-        <h2><router-link to="/about">{{ $t('about') }}</router-link></h2>
-    </li>
-</ul>
+<nav class="header">
+    <h1 class="name">
+        <router-link to="/">Oradimi</router-link>
+    </h1>
+    <div class="header">
+        <h2 class="projects">
+            <router-link to="/projects">{{ $t('dev') }}</router-link>
+        </h2>
+        <h2 class="about">
+            <router-link to="/about">{{ $t('about') }}</router-link>
+        </h2>
+    </div>
+</nav>
 </template>
 
 <script>
@@ -21,19 +23,15 @@ export default {
 <style scoped>
 .header {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
+    word-break: keep-all;
+    white-space: nowrap;
 }
 
 .header > * {
     padding: 0px 10px 0px 10px;
-}
-
-@media (min-width: 450px) {
-    .header {
-        flex-direction: row;
-    }
 }
 </style>

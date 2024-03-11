@@ -33,7 +33,6 @@ export default {
 .link-container {
   position: relative;
   display: inline-block;
-  z-index: 2;
 }
 
 .link-name {
@@ -50,6 +49,7 @@ export default {
   pointer-events: none;
   word-break: keep-all;
   white-space: nowrap;
+  z-index: 2;
 }
 
 .link-container:hover .link-name {

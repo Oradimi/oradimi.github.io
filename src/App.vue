@@ -98,6 +98,7 @@ small {
   background: none;
   border: none;
   text-decoration: none;
+  font-weight: 600;
   color: var(--color-link);
   transition: 0.4s;
   padding: 3px;
