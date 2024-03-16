@@ -131,6 +131,9 @@ export default {
         videos: 'Videos'
     },
 
+    gallery_see_more: 'See more activities outside of dev',
+    show_video: 'show video',
+
     about_content: {
         title: 'Who am I?',
         body: {
@@ -142,12 +145,9 @@ export default {
             + "Through learning a lot of things by myself, I became {t1} "
             + "and I'm capable of {t2} new concepts.\n"
             + "My area of studies also covered a lot of things, "
-            + "from all around development to art and cinema as well as science.\n"
+            + "from all around development to art and cinema as well as science. "
             + "If you'd like to get in touch, you can find my contact information "
-            + "in my {resume}.\n"
-            + "And if you're curious, "
-            + "{link}"
-            + " contains a non-exhaustive list of some other things I did outside of development.",
+            + "in my {resume}.",
             link: "this link right here",
             resume: "resume",
             t0: "always loved video games",

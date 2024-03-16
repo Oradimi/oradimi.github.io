@@ -132,6 +132,9 @@ export default {
         modeling: 'Modélisation 3D',
         videos: 'Vidéos'
     },
+
+    gallery_see_more: 'Voir d\'autres activités en dehors du dev',
+    show_video: 'voir la vidéo',
     
     about_content: {
         title: 'Qui suis-je ?',
@@ -144,12 +147,9 @@ export default {
             + "En apprenant beaucoup de choses par moi-même, je suis devenu {t1} "
             + "et je suis capable {t2} de nouveaux concepts.\n"
             + "Mes études ont convert beaucoup de domaines, "
-            + "du développement en général à l'art en passant par le cinéma.\n"
+            + "du développement en général à l'art en passant par le cinéma. "
             + "Si vous souhaitez prendre contact, vous pouvez trouver mes coordonnées "
-            + "dans mon {resume}.\n"
-            + "Et si vous êtes curieux, "
-            + "{link}"
-            + " contient une liste non exhaustive d'autres choses que j'ai faites en dehors de la programmation.",
+            + "dans mon {resume}.",
             link: "ce lien juste ici",
             resume: "CV",
             t0: "toujours aimé les jeux vidéo",

@@ -1,7 +1,7 @@
 <template>
 <div class="main">
     <div class="image-canvas">
-        <img src="../assets/misc/photo.jpg" class="aligned-right">
+        <img src="../assets/misc/dream.png" class="aligned-right">
     </div>
     <h2>
         {{ $t('about_content.title') }}

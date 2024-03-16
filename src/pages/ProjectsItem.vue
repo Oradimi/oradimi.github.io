@@ -43,6 +43,8 @@
   link="https://github.com/Oradimi/KanColle-English-Patch-KCCP"
   image="KanColleEnglishPatch.png"
   />
+
+  <router-link to="/gallery" class="more">{{ $t('gallery_see_more') }}</router-link>
 </div>
 </template>
 
@@ -56,6 +58,10 @@ export default {
 </script>
 
 <style scoped>
+.more {
+  text-align: center;
+}
+
 .projects {
   display: flex;
   flex-direction: column;

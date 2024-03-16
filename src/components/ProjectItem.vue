@@ -32,7 +32,7 @@
 <div v-if="showFullImage" class="full-image" @click="zoomInHandler">
     <div v-if="typeof video !== 'undefined'" class="iframe-container">
         <img v-if="showThumbnail" :src="imageUrl" />
-        <button v-if="showThumbnail" @click.stop="playVideo" class="play-button">show video</button>
+        <button v-if="showThumbnail" @click.stop="playVideo" class="play-button">{{ $t('show_video') }}</button>
         <iframe v-if="!showThumbnail"
         :src="video" width="1280" height="720"
         frameborder="0" :title="name" allow="autoplay"
