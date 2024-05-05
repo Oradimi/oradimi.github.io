@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkoradimi_portfolio"]=self["webpackChunkoradimi_portfolio"]||[]).push([[917],{8917:function(o,i,p){o.exports=p.p+"img/DoukutsuNoMajo.b6a1f873.png"}}]);

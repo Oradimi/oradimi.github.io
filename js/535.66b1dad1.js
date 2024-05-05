@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkoradimi_portfolio"]=self["webpackChunkoradimi_portfolio"]||[]).push([[535],{535:function(o,i,p){o.exports=p.p+"img/ProjectBoids.bd7c1d8d.png"}}]);

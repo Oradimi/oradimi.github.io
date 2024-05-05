@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkoradimi_portfolio"]=self["webpackChunkoradimi_portfolio"]||[]).push([[850],{850:function(o,i,p){o.exports=p.p+"img/KanColleGlossary.bddbb211.png"}}]);
