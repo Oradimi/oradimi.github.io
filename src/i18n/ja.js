@@ -10,6 +10,18 @@ export default {
     made: 'Made with ',
 
     projects: {
+        bp: {
+            name: 'Boids Project',
+            cat: '2024年4月 – デモ (C++、OpenGL)',
+            desc: "2人のグループで作成した学校のプロジェクト。\n"
+                + "シンプルなシーンにさまざまなランダム要素があります。"
+        },
+        kg: {
+            name: '艦これ用語集',
+            cat: '2024年4月 – ウェブサイト (Vue.js)',
+            desc: "一人で作成した<b>Vue.js</b>の学校のプロジェクト。\n"
+                + "目標はAPIを使用し、ユーザーがデータをフィルタリングおよびソートできるようにするのでした。"
+        },
         mtt: {
             name: 'Meina Teaches Typing',
             cat: '2024年1月 – Game Jam (Godot 4, Blender)',
@@ -23,9 +35,9 @@ export default {
             cat: '2023年12月 – ゲームプロトタイプ (Unity)',
             desc: "3人チームで制作した完全な4次元ルービックキューブです。\n"
                 + "実際の4次元実装が使用されています。\n"
-                + "3週間かけて制作されたビルドが展示されました。<b>Unity</b>を使用しました。\n"
+                + "1月間かけて制作されたビルドが展示されました。<b>Unity</b>を使用しました。\n"
                 + "開発には皆が平等に携わりました。\n"
-                + "2024年5月まで開発中です。\n"
+                + "<a href=https://oradimi.itch.io/rubik4d target='_blank'>itch.io</a>でオンラインでプレイ可能で、モバイルにも対応しています。\n"
                 + "<a href=https://hypercubing.xyz/software/ target='_blank'>「Hypercubing」ウェブサイト</a>に掲載されています。"
         },
         ep: {
@@ -54,6 +66,12 @@ export default {
                 + "インストールを容易にするスクリプトを作成しました。\n"
                 + "<a href='https://imgur.com/a/oAB9f7x' target='_blank'>他のスクリーンショット</a>"
         },
+        dnm: {
+            name: '洞窟の魔女',
+            cat: '2024年4月 – アニメーション (Blender)',
+            desc: "学校のプロジェクト用に存在しないアニメーション映画のオープニング。\n"
+                + "さまざまなアセットのために<a href='https://totoshampoin.fr/' target='_blank'>TotoShampoin</a>と共同制作しました。\n"
+        },
         d2025: {
             name: 'Dualitimac 2025',
             cat: '2023年12月 – アニメーション (Blender)',
@@ -64,10 +82,18 @@ export default {
         bd25h2023: {
             name: '25hBD 2023エディション',
             cat: '2023年10月 – コミック (ClipStudioPaint)',
-            desc: "12ページのコミックをテーマと25時間の制約で描く半年に一度のイベントです。\n"
+            desc: "毎年開催されるイベントで、テーマと25時間以内の制約付きで12ページのコミックを描きます。\n"
                 + "テーマ：「すべてはスケールの問題です！」\n"
-                + "制約：「錯視を含まれる。」\n"
-                + "こちらは<a href='https://drive.google.com/file/d/1gM5X8ZDr3V_CYE-5xi9YAm0n6QS1R2gS/view' target='_blank'>英語版へのリンク</a>です。"
+                + "制約：「錯視を含まれる」\n"
+                + "こちらは<a href='https://drive.google.com/file/d/1h9FhP3FsOI9VKT391MvuwaM1F4__fXSp/view' target='_blank'>英語版へのリンク</a>です。"
+        },
+        bd23h2024: {
+            name: '23hBD 2024 Edition',
+            cat: '2024年3月 – コミック (ClipStudioPaint)',
+            desc: "毎年開催されるイベントで、テーマと23時間以内の制約付きで24ページのコミックを描きます。\n"
+                + "テーマ：「予期せぬ旅」\n"
+                + "制約：「少なくとも1ページはカラーである必要があります」\n"
+                + "こちらは<a href='https://drive.google.com/file/d/1RH8NTMwmkjjPsBHtFaVbIXiyJ1rwFJ28/view' target='_blank'>英語版へのリンク</a>です。"
         },
         vrca: {
             name: 'VRChat Avatars',

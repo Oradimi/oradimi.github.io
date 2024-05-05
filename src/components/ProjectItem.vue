@@ -183,6 +183,7 @@ export default {
     justify-content: center;
     align-items: center;
     cursor: zoom-out;
+    z-index: 1;
 }
 
 .full-image img {

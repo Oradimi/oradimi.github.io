@@ -10,6 +10,19 @@ export default {
     made: 'Made with ',
 
     projects: {
+        bp: {
+            name: 'Boids Project',
+            cat: 'April 2024 – Demo (C++, OpenGL)',
+            desc: "A school project made in a group of two.\n"
+                + "Features various random elements in a simple scene."
+        },
+        kg: {
+            name: 'KanColle Glossary',
+            cat: 'April 2024 – Website (Vue.js)',
+            desc: "A <b>Vue.js</b> school project made alone.\n"
+                + "The goal was to use an API\n"
+                + "and let the user filter and sort the data."
+        },
         mtt: {
             name: 'Meina Teaches Typing',
             cat: 'January 2024 – Game Jam (Godot 4, Blender)',
@@ -23,9 +36,9 @@ export default {
             cat: 'December 2023 – Game Prototype (Unity)',
             desc: "A fully functional 4D Rubik's Cube made in a 3-people team.\n"
                 + "An actual 4D implementation has been used under the hood.\n"
-                + "Build showcased made in 3 weeks using <b>Unity</b>.\n"
+                + "Build showcased made in a month using <b>Unity</b>.\n"
                 + "We were all equally involved in the development.\n"
-                + "Still in development until May 2024.\n"
+                + "Can be played online on <a href=https://oradimi.itch.io/rubik4d target='_blank'>itch.io</a>, and mobile friendly.\n"
                 + "Featured in the <a href=https://hypercubing.xyz/software/ target='_blank'>Hypercubing website software list</a>."
         },
         ep: {
@@ -53,6 +66,12 @@ export default {
                 + "Making of scripts to make installation easier.\n"
                 + "<a href='https://imgur.com/a/oAB9f7x' target='_blank'>More screenshots</a>"
         },
+        dnm: {
+            name: 'The Cave Witch',
+            cat: 'April 2024 – Animation (Blender)',
+            desc: "An opening to a non-existant animation film for a school project.\n"
+                + "Made in collaboration with <a href='https://totoshampoin.fr/' target='_blank'>TotoShampoin</a> for various assets.\n"
+        },
         d2025: {
             name: 'Dualitimac 2025',
             cat: 'December 2023 – Animation (Blender)',
@@ -63,10 +82,18 @@ export default {
         bd25h2023: {
             name: '25hBD 2023 Edition',
             cat: 'October 2023 – Comic (ClipStudioPaint)',
-            desc: "A half-yearly event where you must draw a 12-page comic with a theme and a constraint in 25 hours.\n"
+            desc: "A yearly event where you must draw a 12-page comic with a theme and a constraint in 25 hours.\n"
                 + "Theme: “It's all a question of scale!”\n"
-                + "Constraint: “Make an optical illusion appear.”\n"
-                + "Here is a <a href='https://drive.google.com/file/d/1gM5X8ZDr3V_CYE-5xi9YAm0n6QS1R2gS/view' target='_blank'>link to the english version</a>."
+                + "Constraint: “Make an optical illusion appear”\n"
+                + "Here is a <a href='https://drive.google.com/file/d/1h9FhP3FsOI9VKT391MvuwaM1F4__fXSp/view' target='_blank'>link to the english version</a>."
+        },
+        bd23h2024: {
+            name: '23hBD 2024 Edition',
+            cat: 'March 2024 – Comic (ClipStudioPaint)',
+            desc: "A yearly event where you must draw a 24-page comic with a theme and a constraint in 23 hours.\n"
+                + "Theme: “Unexpected journey”\n"
+                + "Constraint: “At least 1 page must be in color”\n"
+                + "Here is a <a href='https://drive.google.com/file/d/1RH8NTMwmkjjPsBHtFaVbIXiyJ1rwFJ28/view' target='_blank'>link to the english version</a>."
         },
         vrca: {
             name: 'VRChat Avatars',

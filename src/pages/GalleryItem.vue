@@ -2,6 +2,14 @@
 <div class="works">
   <h2>{{ $t('gallery.animation') }}</h2>
   <ProjectItem detailed
+  :name="$t('projects.dnm.name')"
+  :category="$t('projects.dnm.cat')"
+  :description="$t('projects.dnm.desc')"
+  image="DoukutsuNoMajo.png"
+  video="https://drive.google.com/file/d/11dAb9clOxLQP60_ZqY0v3bXVg26ToyD3/preview"
+  />
+
+  <ProjectItem detailed
   :name="$t('projects.d2025.name')"
   :category="$t('projects.d2025.cat')"
   :description="$t('projects.d2025.desc')"
@@ -24,6 +32,14 @@
   :description="$t('projects.bd25h2023.desc')"
   link="https://25hbd.com/participants/2023/oradimi/"
   image="MeinaMeetsFanay.png"
+  />
+
+  <ProjectItem detailed
+  :name="$t('projects.bd23h2024.name')"
+  :category="$t('projects.bd23h2024.cat')"
+  :description="$t('projects.bd23h2024.desc')"
+  link="https://23hbd.com/participants/2024/oradimi"
+  image="AnotherDayWithMeinaAndFanay.png"
   />
 
   <div class="image-collection">

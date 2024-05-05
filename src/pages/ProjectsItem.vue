@@ -1,6 +1,24 @@
 <template>
 <div class="projects">
   <ProjectItem detailed
+  :name="$t('projects.bp.name')"
+  :category="$t('projects.bp.cat')"
+  :description="$t('projects.bp.desc')"
+  link="https://github.com/Oradimi/IMAC2-CS-Project"
+  image="ProjectBoids.png"
+  video="https://drive.google.com/file/d/1rWb4NC3zboGmcXPrLDD-SANsy-tdEjfH/preview"
+  />
+
+  <ProjectItem detailed
+  :name="$t('projects.kg.name')"
+  :category="$t('projects.kg.cat')"
+  :description="$t('projects.kg.desc')"
+  link="https://github.com/Oradimi/IMAC2-Vue-Project"
+  image="KanColleGlossary.png"
+  video="https://drive.google.com/file/d/1SxEFE63D5SjnZRBSxQz5rB4VibH31PaX/preview"
+  />
+
+  <ProjectItem detailed
   :name="$t('projects.mtt.name')"
   :category="$t('projects.mtt.cat')"
   :description="$t('projects.mtt.desc')"
@@ -15,7 +33,7 @@
   :description="$t('projects.r4d.desc')"
   link="https://github.com/melokye/IMAC2_Rubik4D"
   image="Rubik4D.png"
-  video="https://drive.google.com/file/d/1KwEuUV5adGrau9I4TCSRlsQe0PCD0kDG/preview"
+  video="https://www.youtube.com/embed/CQfCuZcSHPw?si=5pZchs6shNzMMtTQ"
   />
 
   <ProjectItem detailed
@@ -27,14 +45,14 @@
   video="https://drive.google.com/file/d/1Na1ul4uJNIKUGjzzfVRfAkxLafO1i4uO/preview"
   />
 
-  <ProjectItem detailed
+  <!-- <ProjectItem detailed
   :name="$t('projects.dv.name')"
   :category="$t('projects.dv.cat')"
   :description="$t('projects.dv.desc')"
   link="https://github.com/Oradimi/Delaunay-Voronoi"
   image="DelaunayVoronoi.png"
   video="https://drive.google.com/file/d/1-fG7dJp1upOypQNRBuLRhnhzmEFoPHaY/preview"
-  />
+  /> -->
 
   <ProjectItem detailed
   :name="$t('projects.kcep.name')"
