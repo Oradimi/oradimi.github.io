@@ -4,10 +4,12 @@ import { createApp } from 'vue'
 import * as VueRouter from "vue-router"
 import App from './App.vue'
 import HomeItem from "./pages/HomeItem.vue"
+import ArtItem from "./pages/ArtItem.vue"
 import i18n from './i18n'
 
 const routes = [
     { path: '/', component: HomeItem },
+    { path: '/art', component: ArtItem },
     { path: '/:pathMatch(.*)', redirect: '/'}
 ]
 

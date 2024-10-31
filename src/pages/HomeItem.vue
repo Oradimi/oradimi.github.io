@@ -1,6 +1,12 @@
 <template>
 <div class="main">
-    <i18n-t tag="h2" keypath="greeting.main">
+    <div class="header">
+        <h2 class="art">
+            <router-link to="/art">{{ $t('art') }}</router-link>
+        </h2>
+    </div>
+    
+    <i18n-t tag="h3" keypath="greeting.main">
         <b>{{ $t('greeting.t0') }}</b>
     </i18n-t>
 </div>
