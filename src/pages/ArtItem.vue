@@ -1,14 +1,11 @@
 <template>
-  <div class="works">  
+  <div class="works">
+    {{ $t("art_notice") }}
     <div class="image-collection">
       <div v-for="year in sortedYears" :key="year">
         <h2 class="year-header">{{ year }}</h2>
         <div class="year-images">
-          <ProjectItem
-            v-for="(image, index) in groupedImages[year]"
-            :key="index"
-            :image="image"
-          />
+          <ProjectItem v-for="(image, index) in groupedImages[year]" :key="index" :image="image.path" :description="image.description" :sortedYears="sortedYears" :groupedImages="groupedImages" :currentIndex="index" :currentYear="year" />
         </div>
       </div>
     </div>
@@ -16,11 +13,11 @@
 </template>
 
 <script>
-import ProjectItem from '@/components/ProjectItem.vue';
+import ProjectItem from "@/components/ProjectItem.vue";
 
 export default {
   components: {
-    ProjectItem
+    ProjectItem,
   },
   data() {
     return {
@@ -30,27 +27,33 @@ export default {
   computed: {
     sortedYears() {
       return Object.keys(this.groupedImages).sort((a, b) => b - a);
-    }
+    },
   },
   created() {
-    const configurations = import.meta.glob('../assets/projects/art/**/*.png', { eager: true });
+    const configurations = import.meta.glob("../assets/projects/art/**/*.png", { eager: true });
 
-    const imagePaths = Object.keys(configurations).map(fullPath => 
-      fullPath.replace('../assets/projects/', '')
-    );
+    const imagePaths = Object.keys(configurations).map((fullPath) => fullPath.replace("../assets/projects/", ""));
 
     imagePaths.reverse();
 
     this.groupedImages = imagePaths.reduce((acc, imagePath) => {
-      const year = imagePath.replace('art/', '').substring(0, 4);
+      const year = imagePath.replace("art/", "").substring(0, 4);
+
+      const fileName = imagePath.replace("art/", "");
+      const [name, extension] = fileName.split(".");
+      const parts = name.split("_");
+      const description = parts.length > 1 ? parts.slice(1).join(" ").replace(/_/g, " ") : "";
 
       if (!acc[year]) {
         acc[year] = [];
       }
-      acc[year].push(imagePath);
+      acc[year].push({
+        path: imagePath,
+        description: description,
+      });
       return acc;
     }, {});
-  }
+  },
 };
 </script>
 
@@ -78,5 +81,6 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  font-size: smaller;
 }
 </style>

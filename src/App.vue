@@ -1,50 +1,50 @@
 <template>
-<div class="padder"></div>
-<div class="wrapper">
-  <HeaderItem/>
-  <router-view v-slot="{ Component }">
-    <transition name="slide-fade">
-      <component :is="Component" />
-    </transition>
-  </router-view>
-</div>
-<footer>
-  <LinksItem/>
-  {{ $t('lights') }}
-  <label id="theme-switch" class="theme-switch" for="checkbox_theme">
-    <input type="checkbox" id="checkbox_theme">
-    <span class="slider round"></span>
-  </label>
-  · {{ $t('made') }}<a href="https://vuejs.org/" target="_blank"><b>Vue.js</b></a>
-  <br>
-  <button class="locale" :class="{ selected: $i18n.locale == 'en' }" @click="toggleLanguage('en')">English</button> · 
-  <button class="locale" :class="{ selected: $i18n.locale == 'fr' }" @click="toggleLanguage('fr')">Français</button> · 
-  <button class="locale" :class="{ selected: $i18n.locale == 'ja' }" @click="toggleLanguage('ja')">日本語</button>
-  <br>{{ $t('moved') }}
-</footer>
+  <div class="padder"></div>
+  <div class="wrapper">
+    <HeaderItem />
+    <router-view v-slot="{ Component }">
+      <transition name="slide-fade">
+        <component :is="Component" />
+      </transition>
+    </router-view>
+  </div>
+  <footer>
+    <LinksItem />
+    {{ $t("lights") }}
+    <label id="theme-switch" class="theme-switch" for="checkbox_theme">
+      <input type="checkbox" id="checkbox_theme" />
+      <span class="slider round"></span>
+    </label>
+    · {{ $t("made") }}<a href="https://vuejs.org/" target="_blank"><b>Vue.js</b></a>
+    <br />
+    <button class="locale" :class="{ selected: $i18n.locale == 'en' }" @click="toggleLanguage('en')">English</button> · <button class="locale" :class="{ selected: $i18n.locale == 'fr' }" @click="toggleLanguage('fr')">Français</button> ·
+    <button class="locale" :class="{ selected: $i18n.locale == 'ja' }" @click="toggleLanguage('ja')">日本語</button>
+    <br />
+    <div class="moved">{{ $t("moved") }}</div>
+  </footer>
 </template>
 
 <script>
-import HeaderItem from './components/HeaderItem.vue'
+import HeaderItem from "./components/HeaderItem.vue";
 import LinksItem from "./components/LinksItem.vue";
 export default {
-  name: 'PortfolioItem',
+  name: "PortfolioItem",
   components: {
     HeaderItem,
-    LinksItem
+    LinksItem,
   },
   methods: {
     toggleLanguage(language) {
       this.$i18n.locale = language;
-      localStorage.setItem('preferredLanguage', language);
+      localStorage.setItem("preferredLanguage", language);
 
       this.$nextTick(() => {
         window.scrollTo(0, document.body.scrollHeight);
       });
-    }
+    },
   },
   created() {
-    const preferredLanguage = localStorage.getItem('preferredLanguage');
+    const preferredLanguage = localStorage.getItem("preferredLanguage");
     if (preferredLanguage) {
       this.$i18n.locale = preferredLanguage;
     } else {
@@ -53,11 +53,11 @@ export default {
       if (availableLocales.includes(usersLanguage)) {
         this.$i18n.locale = usersLanguage;
       } else {
-        this.$i18n.locale = 'en';
+        this.$i18n.locale = "en";
       }
     }
-  }
-}
+  },
+};
 </script>
 
 <style scoped>
@@ -146,8 +146,8 @@ small {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -158,8 +158,8 @@ small {
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
@@ -183,5 +183,9 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.moved {
+  font-size: smaller;
 }
 </style>
