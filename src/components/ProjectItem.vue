@@ -101,34 +101,30 @@ export default {
 
       return formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1);
     },
-    navigateToImage(imagePath) {
-      if (imagePath) {
-        this.fullImageUrl = `/src/assets/projects/${imagePath}`;
-      }
+    navigateToImage(image) {
+      if (!image || !image.hashedPath) return;
+
+      this.fullImageUrl = image.hashedPath;
     },
     previousImage() {
       const yearIndex = this.sortedYears.indexOf(this.fullImageYearIndex);
       if (this.fullImageIndex > 0) {
         this.fullImageIndex += -1;
-        return this.groupedImages[this.fullImageYearIndex][this.fullImageIndex].path;
       } else if (yearIndex > 0) {
         this.fullImageYearIndex = this.sortedYears[yearIndex - 1];
         this.fullImageIndex = this.groupedImages[this.fullImageYearIndex].length - 1;
-        return this.groupedImages[this.fullImageYearIndex][this.fullImageIndex].path;
       }
-      return this.imageUrl;
+      return this.groupedImages[this.fullImageYearIndex][this.fullImageIndex];
     },
     nextImage() {
       const yearIndex = this.sortedYears.indexOf(this.fullImageYearIndex);
       if (this.fullImageIndex < this.groupedImages[this.fullImageYearIndex].length - 1) {
         this.fullImageIndex += 1;
-        return this.groupedImages[this.fullImageYearIndex][this.fullImageIndex].path;
       } else if (yearIndex < this.sortedYears.length - 1) {
         this.fullImageYearIndex = this.sortedYears[yearIndex + 1];
         this.fullImageIndex = 0;
-        return this.groupedImages[this.fullImageYearIndex][this.fullImageIndex].path;
       }
-      return this.imageUrl;
+      return this.groupedImages[this.fullImageYearIndex][this.fullImageIndex];
     },
     handleKeyDown(event) {
       if (this.showFullImage) {

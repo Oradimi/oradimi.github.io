@@ -47,8 +47,10 @@ export default {
     const configurations = import.meta.glob("../assets/projects/comics/**/*.png", { eager: true });
 
     const imagePaths = Object.keys(configurations).map((fullPath) => fullPath.replace("../assets/projects/", ""));
+    const imagePathsHash = Object.values(configurations).map((module) => module.default);
 
-    this.groupedImages = imagePaths.reduce((acc, imagePath) => {
+    this.groupedImages = imagePaths.reduce((acc, imagePath, index) => {
+      const hashedPath = imagePathsHash[index];
       const number = imagePath.replace("comics/", "").substring(0, 5);
 
       if (!acc[number]) {
@@ -56,6 +58,7 @@ export default {
       }
       acc[number].push({
         path: imagePath,
+        hashedPath: hashedPath,
       });
       return acc;
     }, {});

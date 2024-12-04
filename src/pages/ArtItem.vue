@@ -34,9 +34,13 @@ export default {
 
     const imagePaths = Object.keys(configurations).map((fullPath) => fullPath.replace("../assets/projects/", ""));
 
-    imagePaths.reverse();
+    const imagePathsHash = Object.values(configurations).map((module) => module.default);
 
-    this.groupedImages = imagePaths.reduce((acc, imagePath) => {
+    imagePaths.reverse();
+    imagePathsHash.reverse();
+
+    this.groupedImages = imagePaths.reduce((acc, imagePath, index) => {
+      const hashedPath = imagePathsHash[index];
       const year = imagePath.replace("art/", "").substring(0, 4);
 
       const fileName = imagePath.replace("art/", "");
@@ -49,6 +53,7 @@ export default {
       }
       acc[year].push({
         path: imagePath,
+        hashedPath: hashedPath,
         description: description,
       });
       return acc;

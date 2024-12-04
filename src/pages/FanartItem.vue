@@ -33,10 +33,13 @@ export default {
     const configurations = import.meta.glob("../assets/projects/fanart/**/*.png", { eager: true });
 
     const imagePaths = Object.keys(configurations).map((fullPath) => fullPath.replace("../assets/projects/", ""));
+    const imagePathsHash = Object.values(configurations).map((module) => module.default);
 
     imagePaths.reverse();
+    imagePathsHash.reverse();
 
-    this.groupedImages = imagePaths.reduce((acc, imagePath) => {
+    this.groupedImages = imagePaths.reduce((acc, imagePath, index) => {
+      const hashedPath = imagePathsHash[index];
       const year = 0;
 
       const fileName = imagePath.replace("fanart/", "");
@@ -49,6 +52,7 @@ export default {
       }
       acc[year].push({
         path: imagePath,
+        hashedPath: hashedPath,
         description: description,
       });
       return acc;
