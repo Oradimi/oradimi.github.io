@@ -31,8 +31,8 @@
       <p class="description" v-html="formattedDescription"></p>
     </div>
     <div class="image-canvas" :class="{ detailed: detailed }" @click="zoomInHandler">
-      <video v-if="isWebM" :src="imageUrl" loop autoplay muted :class="{ zoomable: !no_zoom }"></video>
-      <img v-else :src="imageUrl" :class="{ zoomable: !no_zoom }" />
+      <video v-if="isWebM" :src="thumbUrl" loop autoplay muted :class="{ zoomable: !no_zoom }"></video>
+      <img v-else :src="thumbUrl" :class="{ zoomable: !no_zoom }" />
     </div>
   </div>
   <div v-if="showFullImage" class="full-image" @click="zoomInHandler">
@@ -43,8 +43,11 @@
       <iframe v-if="!showThumbnail" :src="video" width="1280" height="720" frameborder="0" :title="name" allow="autoplay" allowfullscreen></iframe>
     </div>
     <template v-else>
-      <video v-if="isWebM" :src="fullImageUrl" loop autoplay muted :class="{ zoomable: !no_zoom }"></video>
-      <img v-else :src="fullImageUrl" :class="{ zoomable: !no_zoom }" />
+      <!-- <img v-if="loading" :src="fullImageUrl" /> -->
+      <video v-if="isWebM" :src="fullImageUrl" loop autoplay muted :class="{ zoomable: !no_zoom }" @loadeddata="loading = false"></video>
+      <img v-else :src="fullImageUrl" :class="{ zoomable: !no_zoom }" @load="loading = false" @error="loading = false" />
+      <p v-if="loading" class="description">{{ $t("load") }}</p>
+      <p v-else class="description" v-html="fullImageDescription"></p>
     </template>
     <button v-if="nextImageExists" @click.stop="navigateToImage(nextImage())" class="nav-button next">→</button>
   </div>
@@ -52,6 +55,7 @@
 
 <script>
 const images = import.meta.glob("../assets/projects/**/*.{png,jpg,jpeg,svg,webm}");
+const thumbs = import.meta.glob("../assets/projects_thumbnails/**/*.{png,jpg,jpeg,svg,webm}");
 
 export default {
   name: "ProjectItem",
@@ -169,15 +173,29 @@ export default {
       const yearIndex = this.sortedYears.indexOf(this.fullImageYearIndex);
       return this.fullImageIndex < this.groupedImages[this.fullImageYearIndex].length - 1 || yearIndex < this.sortedYears.length - 1;
     },
+    fullImageDescription() {
+      const image = this.groupedImages[this.fullImageYearIndex][this.fullImageIndex];
+      return image.description ? image.description.replace(/\n/g, "<br>") : "";
+    },
+  },
+  watch: {
+    fullImageUrl: {
+      immediate: true,
+      handler() {
+        this.loading = true; // Reset loading state when image changes
+      },
+    },
   },
   data() {
     return {
       imageUrl: "",
+      thumbUrl: "",
       fullImageUrl: "",
       showFullImage: false,
       showThumbnail: true,
       fullImageIndex: this.currentIndex,
       fullImageYearIndex: this.currentYear,
+      loading: true,
     };
   },
   created() {
@@ -190,6 +208,15 @@ export default {
       });
     } else {
       console.error("Image not found:", imageKey);
+    }
+    const thumbKey = `../assets/projects_thumbnails/${this.image}`;
+    const thumbImport = thumbs[thumbKey];
+    if (thumbImport) {
+      thumbImport().then((thumb) => {
+        this.thumbUrl = thumb.default;
+      });
+    } else {
+      console.error("Thumbnail not found:", thumbKey);
     }
     window.addEventListener("keydown", this.handleKeyDown);
   },
@@ -301,6 +328,7 @@ export default {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: zoom-out;
@@ -358,7 +386,7 @@ export default {
   font-size: 32px;
   font-weight: bold;
   position: absolute;
-  top: 50%;
+  top: 90%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
@@ -367,6 +395,13 @@ export default {
   cursor: pointer;
   border-radius: 10px 10px;
   z-index: 101;
+  transition: top 0.5s ease;
+}
+
+@media (min-width: 1024px) {
+  .nav-button {
+    top: 50%;
+  }
 }
 .nav-button.prev {
   left: 10px;

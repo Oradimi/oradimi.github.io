@@ -8,10 +8,11 @@ export default {
   moved: "If you expected to see my portfolio here, it has been moved.\n" + "If necessary, please contact me through means available to you.",
   kancolle: "play kancolle",
   art: "art",
-  art_notice: "Notice: Drawings without a description are my OCs. Authors mentioned are the character designers.",
+  art_notice: "Notice: Characters without an author precised are my OCs. Authors mentioned are the character designers.",
   comics: "comics",
   comics_notice: "Notice: en/03 is not translated to english yet. There was a theme and a constraint to follow for all comics here.",
   fanart: "fanart",
   fanart_notice: "I'm very grateful for all art of my characters, thank you so much!",
   games: "games",
+  load: "Loading...",
 };

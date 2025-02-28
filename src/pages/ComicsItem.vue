@@ -6,7 +6,7 @@
         <template v-if="locale == year.substring(0, 2)">
           <h2 class="year-header">{{ year }}</h2>
           <div class="year-images">
-            <ProjectItem v-for="(image, index) in groupedImages[year]" :key="index" :image="image.path" :sortedYears="sortedYears" :groupedImages="groupedImages" :currentIndex="index" :currentYear="year" />
+            <ProjectItem v-for="(image, index) in groupedImages[year]" :key="index" :image="image.thumbPath" :sortedYears="sortedYears" :groupedImages="groupedImages" :currentIndex="index" :currentYear="year" />
           </div>
         </template>
       </div>
@@ -44,12 +44,15 @@ export default {
     },
   },
   created() {
-    const configurations = import.meta.glob("../assets/projects/comics/**/*.png", { eager: true });
+    const images = import.meta.glob("../assets/projects/comics/**/*.png", { eager: true });
+    const thumbs = import.meta.glob("../assets/projects_thumbnails/comics/**/*.png", { eager: true });
 
-    const imagePaths = Object.keys(configurations).map((fullPath) => fullPath.replace("../assets/projects/", ""));
-    const imagePathsHash = Object.values(configurations).map((module) => module.default);
+    const imagePaths = Object.keys(images).map((fullPath) => fullPath.replace("../assets/projects/", ""));
+    const thumbPaths = Object.keys(thumbs).map((fullPath) => fullPath.replace("../assets/projects_thumbnails/", ""));
+    const imagePathsHash = Object.values(images).map((module) => module.default);
 
     this.groupedImages = imagePaths.reduce((acc, imagePath, index) => {
+      const thumbPath = thumbPaths[index];
       const hashedPath = imagePathsHash[index];
       const number = imagePath.replace("comics/", "").substring(0, 5);
 
@@ -58,6 +61,7 @@ export default {
       }
       acc[number].push({
         path: imagePath,
+        thumbPath: thumbPath,
         hashedPath: hashedPath,
       });
       return acc;

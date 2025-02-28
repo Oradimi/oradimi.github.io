@@ -5,7 +5,7 @@
       <div v-for="year in sortedYears" :key="year">
         <h2 class="year-header">{{ year }}</h2>
         <div class="year-images">
-          <ProjectItem v-for="(image, index) in groupedImages[year]" :key="index" :image="image.path" :description="image.description" :sortedYears="sortedYears" :groupedImages="groupedImages" :currentIndex="index" :currentYear="year" />
+          <ProjectItem v-for="(image, index) in groupedImages[year]" :key="index" :image="image.thumbPath" :description="image.description" :sortedYears="sortedYears" :groupedImages="groupedImages" :currentIndex="index" :currentYear="year" />
         </div>
       </div>
     </div>
@@ -30,16 +30,19 @@ export default {
     },
   },
   created() {
-    const configurations = import.meta.glob("../assets/projects/art/**/*.png", { eager: true });
+    const images = import.meta.glob("../assets/projects/art/**/*.png", { eager: true });
+    const thumbs = import.meta.glob("../assets/projects_thumbnails/art/**/*.png", { eager: true });
 
-    const imagePaths = Object.keys(configurations).map((fullPath) => fullPath.replace("../assets/projects/", ""));
-
-    const imagePathsHash = Object.values(configurations).map((module) => module.default);
+    const imagePaths = Object.keys(images).map((fullPath) => fullPath.replace("../assets/projects/", ""));
+    const thumbPaths = Object.keys(thumbs).map((fullPath) => fullPath.replace("../assets/projects_thumbnails/", ""));
+    const imagePathsHash = Object.values(images).map((module) => module.default);
 
     imagePaths.reverse();
+    thumbPaths.reverse();
     imagePathsHash.reverse();
 
     this.groupedImages = imagePaths.reduce((acc, imagePath, index) => {
+      const thumbPath = thumbPaths[index];
       const hashedPath = imagePathsHash[index];
       const year = imagePath.replace("art/", "").substring(0, 4);
 
@@ -53,6 +56,7 @@ export default {
       }
       acc[year].push({
         path: imagePath,
+        thumbPath: thumbPath,
         hashedPath: hashedPath,
         description: description,
       });
