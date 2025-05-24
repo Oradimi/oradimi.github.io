@@ -1,12 +1,20 @@
 <template>
   <div class="works">
-    {{ $t("comics_notice") }}
+    <div class="comics-notice" v-html="$t('comics_notice')"></div>
     <div class="image-collection">
       <div v-for="year in sortedYears" :key="year">
         <template v-if="locale == year.substring(0, 2)">
           <h2 class="year-header">{{ year }}</h2>
           <div class="year-images">
-            <ProjectItem v-for="(image, index) in groupedImages[year]" :key="index" :image="image.thumbPath" :sortedYears="sortedYears" :groupedImages="groupedImages" :currentIndex="index" :currentYear="year" />
+            <ProjectItem
+              v-for="(image, index) in groupedImages[year]"
+              :key="index"
+              :image="image.thumbPath"
+              :sortedYears="sortedYears"
+              :groupedImages="groupedImages"
+              :currentIndex="index"
+              :currentYear="year"
+            />
           </div>
         </template>
       </div>
@@ -71,6 +79,15 @@ export default {
 </script>
 
 <style scoped>
+.comics-notice {
+  font-size: smaller;
+  white-space: pre-line;
+}
+
+::v-deep(.comics-notice b) {
+  color: var(--color-link);
+}
+
 .works {
   display: flex;
   flex-direction: column;
