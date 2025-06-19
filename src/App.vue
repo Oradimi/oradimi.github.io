@@ -17,7 +17,8 @@
     </label>
     · {{ $t("made") }}<a href="https://vuejs.org/" target="_blank"><b>Vue.js</b></a>
     <br />
-    <button class="locale" :class="{ selected: $i18n.locale == 'en' }" @click="toggleLanguage('en')">English</button> · <button class="locale" :class="{ selected: $i18n.locale == 'fr' }" @click="toggleLanguage('fr')">Français</button> ·
+    <button class="locale" :class="{ selected: $i18n.locale == 'en' }" @click="toggleLanguage('en')">English</button> ·
+    <button class="locale" :class="{ selected: $i18n.locale == 'fr' }" @click="toggleLanguage('fr')">Français</button> ·
     <button class="locale" :class="{ selected: $i18n.locale == 'ja' }" @click="toggleLanguage('ja')">日本語</button>
     <br />
     <div class="moved">{{ $t("moved") }}</div>

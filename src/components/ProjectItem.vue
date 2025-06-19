@@ -6,7 +6,15 @@
           <a :href="link" target="_blank"
             >{{ name }}
             <svg v-if="link" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" stroke="#666" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path
+                d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9"
+                stroke="#666"
+                stroke-width="1.5"
+                fill="none"
+                fill-rule="evenodd"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
             </svg>
           </a>
         </h2>
@@ -24,7 +32,15 @@
         <a :href="link" target="_blank"
           >{{ name }}
           <svg v-if="link" width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" stroke="#666" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path
+              d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9"
+              stroke="#666"
+              stroke-width="1.5"
+              fill="none"
+              fill-rule="evenodd"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
           </svg>
         </a>
       </h2>
@@ -40,12 +56,35 @@
     <div v-if="typeof video !== 'undefined'" class="iframe-container">
       <img v-if="showThumbnail" :src="fullImageUrl" />
       <button v-if="showThumbnail" @click.stop="playVideo" class="play-button">{{ $t("show_video") }}</button>
-      <iframe v-if="!showThumbnail" :src="video" width="1280" height="720" frameborder="0" :title="name" allow="autoplay" allowfullscreen></iframe>
+      <iframe
+        v-if="!showThumbnail"
+        :src="video"
+        width="1280"
+        height="720"
+        frameborder="0"
+        :title="name"
+        allow="autoplay"
+        allowfullscreen
+      ></iframe>
     </div>
     <template v-else>
       <!-- <img v-if="loading" :src="fullImageUrl" /> -->
-      <video v-if="isWebM" :src="fullImageUrl" loop autoplay muted :class="{ zoomable: !no_zoom }" @loadeddata="loading = false"></video>
-      <img v-else :src="fullImageUrl" :class="{ zoomable: !no_zoom }" @load="loading = false" @error="loading = false" />
+      <video
+        v-if="isWebM"
+        :src="fullImageUrl"
+        loop
+        autoplay
+        muted
+        :class="{ zoomable: !no_zoom }"
+        @loadeddata="loading = false"
+      ></video>
+      <img
+        v-else
+        :src="fullImageUrl"
+        :class="{ zoomable: !no_zoom }"
+        @load="loading = false"
+        @error="loading = false"
+      />
       <p v-if="loading" class="description">{{ $t("load") }}</p>
       <p v-else class="description" v-html="fullImageDescription"></p>
     </template>
@@ -171,7 +210,10 @@ export default {
     },
     nextImageExists() {
       const yearIndex = this.sortedYears.indexOf(this.fullImageYearIndex);
-      return this.fullImageIndex < this.groupedImages[this.fullImageYearIndex].length - 1 || yearIndex < this.sortedYears.length - 1;
+      return (
+        this.fullImageIndex < this.groupedImages[this.fullImageYearIndex].length - 1 ||
+        yearIndex < this.sortedYears.length - 1
+      );
     },
     fullImageDescription() {
       const image = this.groupedImages[this.fullImageYearIndex][this.fullImageIndex];
@@ -276,7 +318,7 @@ export default {
 .image-canvas img,
 .image-canvas video {
   max-height: 20vh;
-  max-width: 300px;
+  max-width: 450px;
   border-radius: 10px 10px;
   object-fit: cover;
 }
@@ -366,7 +408,8 @@ export default {
 
 .play-button {
   position: absolute;
-  font-family: "Encode Sans", Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Encode Sans", Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 18px;
   color: #fff;
   background-color: #a92a2a;
