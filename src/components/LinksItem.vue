@@ -4,10 +4,6 @@
       <img src="../assets/logos/github.svg" alt="github" />
       <p class="link-name">GitHub</p>
     </a>
-    <a class="link-container" href="https://twitter.com/Oradimi" target="_blank">
-      <img src="../assets/logos/twitter.svg" alt="twitter" />
-      <p class="link-name">Twitter</p>
-    </a>
     <a class="link-container" href="https://www.youtube.com/@Oradimi" target="_blank">
       <img src="../assets/logos/youtube.svg" alt="youtube" />
       <p class="link-name">YouTube</p>

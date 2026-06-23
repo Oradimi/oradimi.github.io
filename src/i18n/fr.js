@@ -20,7 +20,9 @@ export default {
                   <b>03.</b> Thème : Inquiétante étrangeté
                       Contrainte : Un personnage doit raconter (ou se remémorer) un rêve.
                   <b>04.</b> Thème : Océan
-                      Contrainte : Un personnage doit arriver en retard avec quelque chose à la bouche !`,
+                      Contrainte : Un personnage doit arriver en retard avec quelque chose à la bouche !
+                  <b>05.</b> Thème : La fuite
+                      Contrainte : Un personnage doit faire face à une langue qu'il ne comprend pas.`,
   fanart: "fanart",
   fanart_notice: "Je suis très content de recevoir des fanarts de mes persos. Merci à tous !",
   games: "jeux",

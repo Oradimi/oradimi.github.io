@@ -21,7 +21,9 @@ export default {
                   <b>03.</b> Theme: Uncanny strangeness
                       Constraint: A character must tell (or remember) a dream.
                   <b>04.</b> Theme: Ocean
-                      Constraint: A character must arrive late with something in their mouth!`,
+                      Constraint: A character must arrive late with something in their mouth!
+                  <b>05.</b> Theme: Escape
+                      Constraint: A character must face a language he doesn't understand.`,
   fanart: "fanart",
   fanart_notice: "I'm very grateful for all art of my characters, thank you so much!",
   games: "games",

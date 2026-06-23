@@ -1,3 +1,3 @@
-# oradimi-personnal-website
+# oradimi-personal-website
 
 Not a portfolio.
